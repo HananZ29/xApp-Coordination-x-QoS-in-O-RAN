@@ -33,6 +33,10 @@
 #include "ns3/oran-module.h"
 #include "ns3/point-to-point-module.h"
 
+#include "oran-command-lte-tx-power.h"
+#include "oran-e2-node-terminator-lte-enb-tpc.h"
+#include "oran-lm-tx-power-step.h"
+
 #include <cmath>
 #include <fstream>
 #include <iomanip>
@@ -54,6 +58,7 @@ std::vector<double> g_offeredMbps;
 std::vector<std::string> g_group;
 std::ofstream g_tputCsv;
 std::ofstream g_hoCsv;
+std::ofstream g_powerCsv;
 Time g_statsStart;
 } // namespace
 
@@ -104,6 +109,31 @@ NotifyHandoverEndOkEnb(std::string context, uint64_t imsi, uint16_t cellid, uint
 }
 
 void
+LogPowerChange(uint16_t cell, double oldDbm, double newDbm, const std::string& source)
+{
+    std::cout << Simulator::Now().As(Time::S) << " cell " << cell << " TxPower " << oldDbm
+              << " -> " << newDbm << " dBm (" << source << ")" << std::endl;
+    g_powerCsv << std::fixed << std::setprecision(4) << Simulator::Now().GetSeconds() << ","
+               << cell << "," << oldDbm << "," << newDbm << "," << source << "\n";
+}
+
+// Scripted power step (no RIC)
+void
+SetEnbTxPower(Ptr<LteEnbNetDevice> enb, uint16_t cell, double dbm)
+{
+    double oldDbm = enb->GetPhy()->GetTxPower();
+    enb->GetPhy()->SetTxPower(dbm);
+    LogPowerChange(cell, oldDbm, dbm, "script");
+}
+
+// Power change executed by the eNB E2 terminator after a RIC command
+void
+RicPowerChange(uint16_t cell, double oldDbm, double newDbm)
+{
+    LogPowerChange(cell, oldDbm, newDbm, "ric");
+}
+
+void
 QueryRcSink(std::string query, std::string args, int rc)
 {
     std::cout << Simulator::Now().GetSeconds() << " Query "
@@ -131,6 +161,14 @@ main(int argc, char* argv[])
     double pathlossExp = 3.0; // log-distance exponent
     uint16_t bandwidthRb = 25; // 25 RBs = 5 MHz
     std::string scheduler = "ns3::PfFfMacScheduler"; // proportional fair (was round robin)
+
+    // Scripted power step (Phase 2 test, no RIC): at tx-step-time, add tx-step-db to cell tx-step-cell
+    double txStepTime = -1; // seconds; negative = no step
+    uint16_t txStepCell = 2;
+    double txStepDb = -6.0;
+    double txMin = 10.0; // dBm, lowest power a RIC command may set
+    double txMax = 40.0; // dBm, highest power a RIC command may set
+    std::string lm = "distance"; // default xApp: "distance" (placeholder) or "txstep" (Phase 2b test)
 
     // ---------------- Traffic ----------------
     double rateA = 1.0;        // offered downlink rate per UE attached to cell A (Mbps)
@@ -166,7 +204,16 @@ main(int argc, char* argv[])
     cmd.AddValue("pathloss-exp", "Log-distance pathloss exponent", pathlossExp);
     cmd.AddValue("bandwidth-rb", "DL/UL bandwidth in resource blocks", bandwidthRb);
     cmd.AddValue("scheduler", "MAC scheduler type, e.g. ns3::PfFfMacScheduler", scheduler);
-    cmd.AddValue("rate-a", "Offered DL rate per UE in cell 1 (Mbps)", rateA);
+    cmd.AddValue("tx-step-time", "Time (s) of a scripted power step; <0 = none", txStepTime);
+    cmd.AddValue("tx-step-cell", "Cell (1 or 2) whose power is stepped", txStepCell);
+    cmd.AddValue("tx-step-db", "Power change in dB (negative = lower)", txStepDb);
+    cmd.AddValue("tx-min", "Lowest power a RIC command may set (dBm)", txMin);
+    cmd.AddValue("tx-max", "Highest power a RIC command may set (dBm)", txMax);
+    cmd.AddValue("lm",
+                 "Default xApp: distance | txstep (txstep sends the tx-step-* change as a RIC "
+                 "command instead of a script)",
+                 lm);
+    cmd.AddValue("rate-a","Offered DL rate per UE in cell 1 (Mbps)", rateA);
     cmd.AddValue("rate-b", "Offered DL rate per UE in cell 2 (Mbps)", rateB);
     cmd.AddValue("packet-size", "UDP packet size (bytes)", packetSize);
     cmd.AddValue("traffic-start", "Time traffic starts", trafficStart);
@@ -292,6 +339,18 @@ main(int argc, char* argv[])
     }
     lteHelper->AddX2Interface(enbNodes);
 
+    NS_ABORT_MSG_IF(lm != "distance" && lm != "txstep", "--lm must be distance or txstep");
+    bool stepViaRic = useRic && lm == "txstep";
+    if (txStepTime >= 0 && !stepViaRic)
+    {
+        NS_ABORT_MSG_IF(txStepCell < 1 || txStepCell > 2, "tx-step-cell must be 1 or 2");
+        Simulator::Schedule(Seconds(txStepTime),
+                            &SetEnbTxPower,
+                            enbLteDevs.Get(txStepCell - 1)->GetObject<LteEnbNetDevice>(),
+                            txStepCell,
+                            enbTxPower + txStepDb);
+    }
+
     // ---------------- Traffic: CBR/UDP downlink, one flow per UE ----------------
     g_winBytes.assign(numberOfUes, 0);
     g_totBytes.assign(numberOfUes, 0);
@@ -333,6 +392,10 @@ main(int argc, char* argv[])
     g_tputCsv << "time_s,ue,imsi,group,cell_id,rx_bytes,tput_mbps,offered_mbps\n";
     g_hoCsv.open(out + "-ho.csv");
     g_hoCsv << "time_s,imsi,target_cell\n";
+    g_powerCsv.open(out + "-power.csv");
+    g_powerCsv << "time_s,cell,old_dbm,new_dbm,source\n";
+    g_powerCsv << "0.0000,1," << enbTxPower << "," << enbTxPower << ",initial\n";
+    g_powerCsv << "0.0000,2," << enbTxPower << "," << enbTxPower << ",initial\n";
     {
         std::ofstream ues(out + "-ues.csv");
         ues << "ue,imsi,group,x,y,initial_cell,offered_mbps\n";
@@ -367,11 +430,26 @@ main(int argc, char* argv[])
         oranHelper->SetDataRepository("ns3::OranDataRepositorySqlite",
                                       "DatabaseFile",
                                       StringValue(dbFileName));
-        // Placeholder xApp for Phase 1: hands a UE to its closest eNB.
-        // Replaced by the TS and TPC xApps in Phase 3.
-        oranHelper->SetDefaultLogicModule("ns3::OranLmLte2LteDistanceHandover",
-                                          "ProcessingDelayRv",
-                                          StringValue(processingDelayRv));
+        if (lm == "txstep")
+        {
+            // Phase 2b test xApp: one power command to tx-step-cell at the first cycle >= tx-step-time
+            Config::SetDefault("ns3::OranLmTxPowerStep::StepTime",
+                               TimeValue(Seconds(txStepTime >= 0 ? txStepTime : 15.0)));
+            Config::SetDefault("ns3::OranLmTxPowerStep::TargetCellId", UintegerValue(txStepCell));
+            Config::SetDefault("ns3::OranLmTxPowerStep::TxPowerDbm",
+                               DoubleValue(enbTxPower + txStepDb));
+            oranHelper->SetDefaultLogicModule("ns3::OranLmTxPowerStep",
+                                              "ProcessingDelayRv",
+                                              StringValue(processingDelayRv));
+        }
+        else
+        {
+            // Placeholder xApp for Phase 1: hands a UE to its closest eNB.
+            // Replaced by the TS and TPC xApps in Phase 3.
+            oranHelper->SetDefaultLogicModule("ns3::OranLmLte2LteDistanceHandover",
+                                              "ProcessingDelayRv",
+                                              StringValue(processingDelayRv));
+        }
         oranHelper->SetConflictMitigationModule("ns3::OranCmmNoop");
 
         nearRtRic = oranHelper->CreateNearRtRic();
@@ -390,7 +468,10 @@ main(int argc, char* argv[])
             StringValue("ns3::OranReportTriggerLteUeHandover[InitialReport=true]"));
         e2NodeTerminatorsUes.Add(oranHelper->DeployTerminators(nearRtRic, ueNodes));
 
-        oranHelper->SetE2NodeTerminator("ns3::OranE2NodeTerminatorLteEnb",
+        // eNB terminator that also executes transmit-power commands (handover still works)
+        Config::SetDefault("ns3::OranE2NodeTerminatorLteEnbTpc::MinTxPowerDbm", DoubleValue(txMin));
+        Config::SetDefault("ns3::OranE2NodeTerminatorLteEnbTpc::MaxTxPowerDbm", DoubleValue(txMax));
+        oranHelper->SetE2NodeTerminator("ns3::OranE2NodeTerminatorLteEnbTpc",
                                         "RegistrationIntervalRv",
                                         StringValue("ns3::ConstantRandomVariable[Constant=1]"),
                                         "SendIntervalRv",
@@ -399,6 +480,12 @@ main(int argc, char* argv[])
                                 "Trigger",
                                 StringValue("ns3::OranReportTriggerPeriodic"));
         e2NodeTerminatorsEnbs.Add(oranHelper->DeployTerminators(nearRtRic, enbNodes));
+        for (uint32_t i = 0; i < e2NodeTerminatorsEnbs.GetN(); i++)
+        {
+            e2NodeTerminatorsEnbs.Get(i)->TraceConnectWithoutContext(
+                "TxPowerChange",
+                MakeCallback(&RicPowerChange));
+        }
 
         if (dbLog)
         {
@@ -446,6 +533,7 @@ main(int argc, char* argv[])
 
     g_tputCsv.close();
     g_hoCsv.close();
+    g_powerCsv.close();
     Simulator::Destroy();
     return 0;
 }
