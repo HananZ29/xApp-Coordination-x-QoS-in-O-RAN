@@ -1,0 +1,16 @@
+variant,seed,pos,rate_a,rate_b,arm,identical
+V0,3001,x45,0.51,0.29,b4sats,True
+V0,3001,x45,0.51,0.29,b4satpc,True
+V0,3001,x45,0.51,0.29,b5sa,True
+V0,3001,x45,0.92,0.29,b4sats,True
+V0,3001,x45,0.92,0.29,b4satpc,True
+V0,3001,x45,0.92,0.29,b5sa,True
+V0,3001,x55,0.51,0.29,b4sats,True
+V0,3001,x55,0.51,0.29,b4satpc,True
+V0,3001,x55,0.51,0.29,b5sa,True
+V0,3001,x55,0.92,0.29,b4sats,True
+V0,3001,x55,0.92,0.29,b4satpc,True
+V0,3001,x55,0.92,0.29,b5sa,True
+V0,3001,x55,1.23,0.29,b4sats,True
+V0,3001,x55,1.23,0.29,b4satpc,True
+V0,3001,x55,1.23,0.29,b5sa,True

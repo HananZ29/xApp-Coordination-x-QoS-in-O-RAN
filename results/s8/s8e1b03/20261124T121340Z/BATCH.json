@@ -1,0 +1,15 @@
+{
+  "batch": "s8e1b03",
+  "stamp": "20261124T121340Z",
+  "external_data": "data/s8/s8e1b03-20261124T121340Z",
+  "code": {
+    "commit": "e83a7c8eeb08e448e90d219af67d2131dafa2394",
+    "branch": "feat/restore-phase1-2",
+    "dirty": false
+  },
+  "runs": 119,
+  "status_counts": {
+    "completed": 119
+  },
+  "wall_clock_s": 1181.7
+}

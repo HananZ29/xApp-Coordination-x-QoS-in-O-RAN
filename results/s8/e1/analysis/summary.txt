@@ -1,0 +1,14 @@
+S8-E1 FINAL
+events 155 / sampled clusters 440
+
+pos  rate_a  rate_b  events  clusters   rate  cp_lo  cp_hi  s7_events  s7_clusters  b3_b3h_flag_disagreements
+x45    1.23    0.29     112       220 0.5091 0.4410 0.5769          6           13                          0
+x55    0.92    0.29      43       220 0.1955 0.1452 0.2541          0           13                          0
+
+     arm outcome  events  seeds     est   t95_lo  t95_hi  nonzero  benefit  harm  holm_p     category SENS_ci_inclusion_category
+ B4sa-TS       G     155    132 0.00109  0.00030 0.00188      106      102     4 0.00000   equivalent                 equivalent
+ B4sa-TS       V     155    132 0.00164 -0.00107 0.00435        6        4     2 0.00000   equivalent                 equivalent
+B4sa-TPC       G     155    132 0.02096  0.01538 0.02653       83       70    13 0.00064        helps                      helps
+B4sa-TPC       V     155    132 0.01036  0.00385 0.01687       45       24    21 0.91364 inconclusive               inconclusive
+    B5sa       G     155    132 0.01876  0.01386 0.02366      155      143    12 0.00168        helps                      helps
+    B5sa       V     155    132 0.00711  0.00170 0.01252       45       26    19 0.58564 inconclusive               inconclusive

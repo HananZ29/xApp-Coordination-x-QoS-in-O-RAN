@@ -1,0 +1,42 @@
+01:48:50 S7 start: block 1 (seed 1001), every run simulated
+02:42:38 wave s7b1001: 536 runs, 0 failed, 53.8 min
+02:42:38 block1 D0:same_cycle: LZ 36/36 identical, EH 24/24, missing 0 -> LZ
+02:42:38 block1 D0:combined: LZ 33/33 identical, EH 22/22, missing 0 -> LZ
+02:42:39 block1 D1:same_cycle: LZ 36/36 identical, EH 24/24, missing 0 -> LZ
+02:42:39 block1 D1:combined: LZ 36/36 identical, EH 24/24, missing 0 -> LZ
+02:42:39 block1 D1d1:same_cycle: LZ 36/36 identical, EH 24/24, missing 0 -> LZ
+02:42:39 block1 D1d1:combined: LZ 36/36 identical, EH 24/24, missing 0 -> LZ
+02:42:39 block1 D1d2:same_cycle: LZ 36/36 identical, EH 24/24, missing 0 -> LZ
+02:42:39 block1 D1d2:combined: LZ 33/33 identical, EH 22/22, missing 0 -> LZ
+02:42:39 block1 D1d3:same_cycle: LZ 33/33 identical, EH 22/22, missing 0 -> LZ
+02:42:39 block1 D1d3:combined: LZ 30/30 identical, EH 20/20, missing 0 -> LZ
+02:42:39 block1 C3:combined: LZ 9/9 identical, EH 6/6, missing 0 -> LZ
+02:42:39 block1 U-B0: 12/12 identical -> derive B0@D1
+02:58:37 wave s7w1002: 152 runs, 0 failed, 16.0 min
+02:58:37 seed 1002 phase B: 24 conditional runs to simulate, 360 derived
+03:16:44 wave s7w1003: 176 runs, 0 failed, 18.1 min
+03:16:45 seed 1003 phase B: 9 conditional runs to simulate, 375 derived
+03:33:22 wave s7w1004: 161 runs, 0 failed, 16.6 min
+03:33:23 seed 1004 phase B: 24 conditional runs to simulate, 360 derived
+03:51:43 wave s7w1005: 176 runs, 0 failed, 18.3 min
+03:51:44 seed 1005 phase B: 9 conditional runs to simulate, 375 derived
+04:08:52 wave s7w1006: 161 runs, 0 failed, 17.1 min
+04:08:53 seed 1006 phase B: 9 conditional runs to simulate, 375 derived
+04:26:00 wave s7w1007: 161 runs, 0 failed, 17.1 min
+04:26:01 seed 1007 phase B: 24 conditional runs to simulate, 360 derived
+04:44:34 wave s7w1008: 176 runs, 0 failed, 18.5 min
+04:44:34 seed 1008 phase B: 15 conditional runs to simulate, 369 derived
+08:39:06 RECOVERY s7w1009: 156 valid runs kept (manifest + sha256 verified), 11 rerun in s7w1009c
+08:40:30 wave s7w1009c: 11 runs, 0 failed, 1.4 min
+08:40:30 RECOVERY s7w1009 complete; frozen executor resumes at seed 1010
+08:40:32 seed 1009 phase B: 24 conditional runs to simulate, 360 derived
+09:05:01 wave s7w1010: 176 runs, 0 failed, 24.5 min
+09:05:02 seed 1010 phase B: 39 conditional runs to simulate, 345 derived
+09:32:30 wave s7w1011: 191 runs, 0 failed, 27.5 min
+09:32:31 seed 1011 phase B: 9 conditional runs to simulate, 375 derived
+09:55:25 wave s7w1012: 161 runs, 0 failed, 22.9 min
+09:55:26 seed 1012 phase B: 24 conditional runs to simulate, 360 derived
+10:17:55 wave s7w1013: 176 runs, 0 failed, 22.5 min
+10:17:56 seed 1013 phase B: 9 conditional runs to simulate, 375 derived
+10:19:26 wave s7wfinal: 9 runs, 0 failed, 1.5 min
+10:19:26 S7 ALL DONE

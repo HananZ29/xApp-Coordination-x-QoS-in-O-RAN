@@ -1,0 +1,3 @@
+variant,clusters,flagged_V0,flagged_Vk,only_V0,only_Vk,p_mcnemar_exact,holm_p
+V1,156,17,14,3,0,0.25,0.5
+V2,156,17,17,0,0,1.0,1.0

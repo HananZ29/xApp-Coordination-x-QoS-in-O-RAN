@@ -1,0 +1,6 @@
+Study,Seeds,Design,Simulated,Derived,Status
+S7 confirmatory matrix,1001–1013,12 conditions × 536 cells/seed,2579,4389,FINAL
+S8-E1 event-enriched,2001–2220,2 joint-activity conditions; stop at ≥ 150 events,1429,771,FINAL (155 events)
+S8-E2 TPC sensitivity,3001–3026,3 TPC variants × 6 conditions,2061,1215,FINAL
+S8-E5 load step,5001–5026,4 scenarios × 8 arms,running,–,INCOMPLETE
+S8-E3 random geometry,4001–4080,80 layouts × 6 loads,queued,–,INCOMPLETE

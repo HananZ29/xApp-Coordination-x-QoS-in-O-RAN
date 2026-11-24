@@ -1,0 +1,81 @@
+family,contrast,delay,outcome,flagged_clusters,mean,sd,benefit,harm,under_covered
+F1 C1-D1 total,b4ts-B3,D1,rel_goodput,6,0.00027695073180785307,0.0006783879768196311,1,0,True
+F1 C1-D1 total,b4ts-B3,D1,viol,6,0.0,0.0,0,0,True
+F1 C1-D1 total,b4tpc-B3,D1,rel_goodput,6,0.013226086167800466,0.03239716240519371,1,0,True
+F1 C1-D1 total,b4tpc-B3,D1,viol,6,0.0,0.0,0,0,True
+F1 C1-D1 total,b5-B3,D1,rel_goodput,6,0.00035800948258089366,0.0008769405554010118,1,0,True
+F1 C1-D1 total,b5-B3,D1,viol,6,0.0,0.0,0,0,True
+F1 C1-D1 total,b4sats-B3,D1,rel_goodput,6,0.001979184498041594,0.0011017481629719888,5,0,True
+F1 C1-D1 total,b4sats-B3,D1,viol,6,0.0,0.0,0,0,True
+F1 C1-D1 total,b4satpc-B3,D1,rel_goodput,6,0.0266277996289425,0.04125295569042373,2,0,True
+F1 C1-D1 total,b4satpc-B3,D1,viol,6,0.0,0.0,0,0,True
+F1 C1-D1 total,b5sa-B3,D1,rel_goodput,6,0.015461956709956667,0.03182076611548197,6,0,True
+F1 C1-D1 total,b5sa-B3,D1,viol,6,0.0,0.0,0,0,True
+F2 C1-D0,b4ts-B3,D0,rel_goodput,7,0.00034160473540064844,0.0009038011765521382,1,0,True
+F2 C1-D0,b4ts-B3,D0,viol,7,0.0,0.0,0,0,True
+F2 C1-D0,b4tpc-B3,D0,rel_goodput,7,0.011406124215920148,0.03017776809843631,1,0,True
+F2 C1-D0,b4tpc-B3,D0,viol,7,0.0,0.0,0,0,True
+F2 C1-D0,b5-B3,D0,rel_goodput,7,0.0003126551815531485,0.0008272078565053801,1,0,True
+F2 C1-D0,b5-B3,D0,viol,7,0.0,0.0,0,0,True
+F2 C1-D0,b4sats-B3,D0,rel_goodput,7,0.0016038052831522137,0.00114224242466115,5,0,True
+F2 C1-D0,b4sats-B3,D0,viol,7,0.0,0.0,0,0,True
+F2 C1-D0,b4satpc-B3,D0,rel_goodput,7,0.024767172388277286,0.03808440164279394,3,0,True
+F2 C1-D0,b4satpc-B3,D0,viol,7,-0.0051830255911888565,0.013712996753169242,1,0,True
+F2 C1-D0,b5sa-B3,D0,rel_goodput,7,0.014935903901661853,0.02911148930839156,7,0,True
+F2 C1-D0,b5sa-B3,D0,viol,7,-0.0051830255911888565,0.013712996753169242,1,0,True
+F3 C2 arbitration,b4ts-B3h,D1,rel_goodput,6,0.00027695073180785307,0.0006783879768196311,1,0,True
+F3 C2 arbitration,b4ts-B3h,D1,viol,6,0.0,0.0,0,0,True
+F3 C2 arbitration,b4tpc-B3h,D1,rel_goodput,6,0.013226086167800466,0.03239716240519371,1,0,True
+F3 C2 arbitration,b4tpc-B3h,D1,viol,6,0.0,0.0,0,0,True
+F3 C2 arbitration,b5-B3h,D1,rel_goodput,6,0.00035800948258089366,0.0008769405554010118,1,0,True
+F3 C2 arbitration,b5-B3h,D1,viol,6,0.0,0.0,0,0,True
+F3 C2 arbitration,b4sats-B3h,D1,rel_goodput,6,0.001979184498041594,0.0011017481629719888,5,0,True
+F3 C2 arbitration,b4sats-B3h,D1,viol,6,0.0,0.0,0,0,True
+F3 C2 arbitration,b4satpc-B3h,D1,rel_goodput,6,0.0266277996289425,0.04125295569042373,2,0,True
+F3 C2 arbitration,b4satpc-B3h,D1,viol,6,0.0,0.0,0,0,True
+F3 C2 arbitration,b5sa-B3h,D1,rel_goodput,6,0.015461956709956667,0.03182076611548197,6,0,True
+F3 C2 arbitration,b5sa-B3h,D1,viol,6,0.0,0.0,0,0,True
+F3 C2 arbitration,b4ts-B3h,D1d1,rel_goodput,6,0.0005944308390022727,0.0014560522429300656,1,0,True
+F3 C2 arbitration,b4ts-B3h,D1d1,viol,6,0.0,0.0,0,0,True
+F3 C2 arbitration,b4tpc-B3h,D1d1,rel_goodput,6,0.013543566274994848,0.03317482667130406,1,0,True
+F3 C2 arbitration,b4tpc-B3h,D1d1,viol,6,0.0,0.0,0,0,True
+F3 C2 arbitration,b5-B3h,D1d1,rel_goodput,6,0.0005741661513090265,0.0014064140982847544,1,0,True
+F3 C2 arbitration,b5-B3h,D1d1,viol,6,0.0,0.0,0,0,True
+F3 C2 arbitration,b4sats-B3h,D1d1,rel_goodput,6,0.0023371939806225614,0.001243576151319075,5,0,True
+F3 C2 arbitration,b4sats-B3h,D1d1,viol,6,0.0,0.0,0,0,True
+F3 C2 arbitration,b4satpc-B3h,D1d1,rel_goodput,6,0.026776407338693093,0.04148602121784215,2,0,True
+F3 C2 arbitration,b4satpc-B3h,D1d1,viol,6,0.0,0.0,0,0,True
+F3 C2 arbitration,b5sa-B3h,D1d1,rel_goodput,6,0.01554977035662756,0.031281859160483726,6,0,True
+F3 C2 arbitration,b5sa-B3h,D1d1,viol,6,0.0,0.0,0,0,True
+F3 C2 arbitration,b4ts-B3h,D1d2,rel_goodput,7,0.0004921424154076894,0.0013020864407953887,1,0,True
+F3 C2 arbitration,b4ts-B3h,D1d2,viol,7,0.0,0.0,0,0,True
+F3 C2 arbitration,b4tpc-B3h,D1d2,rel_goodput,7,0.011440863680537159,0.03026968008249244,1,0,True
+F3 C2 arbitration,b4tpc-B3h,D1d2,viol,7,0.0,0.0,0,0,True
+F3 C2 arbitration,b5-B3h,D1d2,rel_goodput,7,0.0004979323261772148,0.0013174051048048072,1,0,True
+F3 C2 arbitration,b5-B3h,D1d2,viol,7,0.0,0.0,0,0,True
+F3 C2 arbitration,b4sats-B3h,D1d2,rel_goodput,7,0.0018180319816238116,0.0013580724982044945,5,0,True
+F3 C2 arbitration,b4sats-B3h,D1d2,viol,7,0.0,0.0,0,0,True
+F3 C2 arbitration,b4satpc-B3h,D1d2,rel_goodput,7,0.024601684234452286,0.03783577091699181,3,0,True
+F3 C2 arbitration,b4satpc-B3h,D1d2,viol,7,-0.004211208292840946,0.011141809861950009,1,0,True
+F3 C2 arbitration,b5sa-B3h,D1d2,rel_goodput,7,0.014984642446308467,0.028504110469547803,7,0,True
+F3 C2 arbitration,b5sa-B3h,D1d2,viol,7,-0.004211208292840946,0.011141809861950009,1,0,True
+F3 C2 arbitration,b4ts-B3h,D1d3,rel_goodput,21,0.0006295508611346555,0.0011194070974339346,13,2,False
+F3 C2 arbitration,b4ts-B3h,D1d3,viol,21,-0.0025915127955944313,0.002710268955406787,14,0,False
+F3 C2 arbitration,b4tpc-B3h,D1d3,rel_goodput,21,-0.001487626510246809,0.018822878038721458,1,14,False
+F3 C2 arbitration,b4tpc-B3h,D1d3,viol,21,0.00183565489687938,0.00409540681751709,2,11,False
+F3 C2 arbitration,b5-B3h,D1d3,rel_goodput,21,-0.005454132188444372,0.004284353947899755,1,14,False
+F3 C2 arbitration,b5-B3h,D1d3,viol,21,-0.001187776697980782,0.0042795939224651,13,1,False
+F3 C2 arbitration,b4sats-B3h,D1d3,rel_goodput,21,0.0010888837821818756,0.0012744463020822874,17,2,False
+F3 C2 arbitration,b4sats-B3h,D1d3,viol,21,-0.0025915127955944313,0.002710268955406787,14,0,False
+F3 C2 arbitration,b4satpc-B3h,D1d3,rel_goodput,21,-0.0003753565626563831,0.027896973920778598,3,14,False
+F3 C2 arbitration,b4satpc-B3h,D1d3,viol,21,0.005291005291005288,0.03980436972707938,13,1,False
+F3 C2 arbitration,b5sa-B3h,D1d3,rel_goodput,21,-0.0007013493790337772,0.019117908024591176,7,14,False
+F3 C2 arbitration,b5sa-B3h,D1d3,viol,21,-0.002591512795594431,0.00749623353767809,14,1,False
+F4 C2 overhead,B3h-B3@D1,D1,rel_goodput,6,0.0,0.0,0,0,True
+F4 C2 overhead,B3h-B3@D1,D1,viol,6,0.0,0.0,0,0,True
+F4 C2 overhead,B3h-B3@D1,D1d1,rel_goodput,6,-4.728427128425361e-05,0.0007889880339350189,4,2,True
+F4 C2 overhead,B3h-B3@D1,D1d1,viol,6,0.0,0.0,0,0,True
+F4 C2 overhead,B3h-B3@D1,D1d2,rel_goodput,7,-0.0015901595779583674,0.005177200595082082,4,3,True
+F4 C2 overhead,B3h-B3@D1,D1d2,viol,7,0.004211208292840946,0.011141809861950009,0,1,True
+F4 C2 overhead,B3h-B3@D1,D1d3,rel_goodput,21,-0.0008206269774214522,0.0026994393922115667,9,12,False
+F4 C2 overhead,B3h-B3@D1,D1d3,viol,21,0.005291005291005295,0.00646689331404609,1,14,False

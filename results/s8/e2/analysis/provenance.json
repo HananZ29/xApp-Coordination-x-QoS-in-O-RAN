@@ -1,0 +1,9 @@
+{
+ "label": "FINAL",
+ "runs": 3276,
+ "derived": 1215,
+ "seeds": 26,
+ "script_sha256": "ad10d8ef7ab45e84f86ac1c1c9d8b6370941b332f7c070f8e2db0c415a7beca2",
+ "delta": 0.01,
+ "alpha": 0.05
+}

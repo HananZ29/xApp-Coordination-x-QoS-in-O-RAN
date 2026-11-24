@@ -1,0 +1,8 @@
+Arm,Decision,Events,ΔG,ΔV,Δmin-user,Handovers,TPC reductions
+B4sa-TS,TPC suppressed,105,+0.0016,+0.0024,-0.0106,1.08 / 1.11,1.04 / 1.06
+B4sa-TS,no intervention,50,-0.0000,+0.0000,-0.0000,2.40 / 2.40,2.38 / 2.38
+B4sa-TPC,TS suppressed,83,+0.0391,+0.0193,+0.1232,0.04 / 1.99,1.96 / 1.90
+B4sa-TPC,no intervention,72,+0.0000,+0.0000,+0.0000,1.00 / 1.00,1.00 / 1.00
+B5sa,TPC suppressed,75,+0.0025,-0.0005,-0.0078,1.08 / 1.08,1.04 / 1.04
+B5sa,TS suppressed,50,+0.0239,+0.0231,+0.0746,0.00 / 2.40,2.00 / 2.38
+B5sa,both suppressed,30,+0.0508,-0.0005,+0.1647,0.47 / 1.20,2.57 / 1.10

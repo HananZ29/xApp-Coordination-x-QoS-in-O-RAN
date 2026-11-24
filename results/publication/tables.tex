@@ -1,0 +1,150 @@
+% requires booktabs
+% T1
+\begin{table}[t]\centering\caption{Experiments and execution}\label{tab:t1}\footnotesize
+\begin{tabular}{llllll}\toprule
+Study & Seeds & Design & Simulated & Derived & Status \\\midrule
+S7 confirmatory matrix & 1001–1013 & 12 conditions × 536 cells/seed & 2579 & 4389 & FINAL \\
+S8-E1 event-enriched & 2001–2220 & 2 joint-activity conditions; stop at $\ge$ 150 events & 1429 & 771 & FINAL (155 events) \\
+S8-E2 TPC sensitivity & 3001–3026 & 3 TPC variants × 6 conditions & 2061 & 1215 & FINAL \\
+S8-E5 load step & 5001–5026 & 4 scenarios × 8 arms & running & – & INCOMPLETE \\
+S8-E3 random geometry & 4001–4080 & 80 layouts × 6 loads & queued & – & INCOMPLETE \\
+\bottomrule\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize All runs completed; 0 failed, 0 retried in every study. Derived = output provably identical to a verified source run (identity rules re-verified per study).}\end{table}
+
+% T2
+\begin{table}[t]\centering\caption{S7 confirmatory families F1 (D1) and F2 (D0): coordinated arm $-$ B3}\label{tab:t2}\footnotesize
+\begin{tabular}{lllllllll}\toprule
+Family & Timing & Arm & Outcome & $\Delta$ [95 \% CI] & Clusters & Holm p & Category & $\delta$* \\\midrule
+F1 & D1 & B4-TS & G & +0.0000 [+0.0000, +0.0001] & 2/154/0 & 0.0024 & equivalent & 0.0000 \\
+F1 & D1 & B4-TS & V & +0.0000 [+0.0000, +0.0000] & 0/156/0 & 0.0024 & no difference in 156/156 & 0.0000 \\
+F1 & D1 & B4-TPC & G & +0.0005 [+0.0000, +0.0025] & 2/154/0 & 0.0024 & equivalent & 0.0014 \\
+F1 & D1 & B4-TPC & V & +0.0000 [+0.0000, +0.0000] & 0/156/0 & 0.0024 & no difference in 156/156 & 0.0000 \\
+F1 & D1 & B5 & G & +0.0000 [+0.0000, +0.0001] & 2/154/0 & 0.0024 & equivalent & 0.0000 \\
+F1 & D1 & B5 & V & +0.0000 [+0.0000, +0.0000] & 0/156/0 & 0.0024 & no difference in 156/156 & 0.0000 \\
+F1 & D1 & B4sa-TS & G & +0.0001 [+0.0000, +0.0001] & 6/150/0 & 0.0024 & equivalent & 0.0001 \\
+F1 & D1 & B4sa-TS & V & +0.0000 [+0.0000, +0.0000] & 0/156/0 & 0.0024 & no difference in 156/156 & 0.0000 \\
+F1 & D1 & B4sa-TPC & G & +0.0010 [+0.0000, +0.0031] & 3/153/0 & 0.0024 & equivalent & 0.0023 \\
+F1 & D1 & B4sa-TPC & V & +0.0000 [+0.0000, +0.0000] & 0/156/0 & 0.0024 & no difference in 156/156 & 0.0000 \\
+F1 & D1 & B5sa & G & +0.0006 [+0.0001, +0.0026] & 7/149/0 & 0.0024 & equivalent & 0.0015 \\
+F1 & D1 & B5sa & V & +0.0000 [+0.0000, +0.0000] & 0/156/0 & 0.0024 & no difference in 156/156 & 0.0000 \\
+F2 & D0 & B4-TS & G & +0.0000 [+0.0000, +0.0001] & 1/155/0 & 0.0024 & equivalent & 0.0000 \\
+F2 & D0 & B4-TS & V & +0.0000 [+0.0000, +0.0000] & 0/156/0 & 0.0024 & no difference in 156/156 & 0.0000 \\
+F2 & D0 & B4-TPC & G & +0.0005 [+0.0000, +0.0026] & 1/155/0 & 0.0024 & equivalent & 0.0014 \\
+F2 & D0 & B4-TPC & V & +0.0000 [+0.0000, +0.0000] & 0/156/0 & 0.0024 & no difference in 156/156 & 0.0000 \\
+F2 & D0 & B5 & G & +0.0000 [+0.0000, +0.0001] & 1/155/0 & 0.0024 & equivalent & 0.0000 \\
+F2 & D0 & B5 & V & +0.0000 [+0.0000, +0.0000] & 0/156/0 & 0.0024 & no difference in 156/156 & 0.0000 \\
+F2 & D0 & B4sa-TS & G & +0.0001 [+0.0000, +0.0001] & 5/151/0 & 0.0024 & equivalent & 0.0001 \\
+F2 & D0 & B4sa-TS & V & +0.0000 [+0.0000, +0.0000] & 0/156/0 & 0.0024 & no difference in 156/156 & 0.0000 \\
+F2 & D0 & B4sa-TPC & G & +0.0011 [+0.0001, +0.0032] & 3/153/0 & 0.0024 & equivalent & 0.0023 \\
+F2 & D0 & B4sa-TPC & V & -0.0002 [-0.0012, +0.0000] & 1/155/0 & 0.0024 & equivalent & 0.0006 \\
+F2 & D0 & B5sa & G & +0.0007 [+0.0001, +0.0027] & 7/149/0 & 0.0024 & equivalent & 0.0016 \\
+F2 & D0 & B5sa & V & -0.0002 [-0.0012, +0.0000] & 1/155/0 & 0.0024 & equivalent & 0.0006 \\
+\bottomrule\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize 13 seeds × 12 conditions (156 clusters). BCa 95 \% CI (seed blocks). Clusters = benefit/zero/harm. $\delta$* = smallest margin at which a t-based TOST still holds (audit). 'No difference in 156/156': every cluster difference is exactly 0 (rare-event bound: share of affected clusters ≤ 1.9 \%).}\end{table}
+
+% T3
+\begin{table}[t]\centering\caption{S7 coordination hold: arbitration at 250 ms (F3) and overhead B3h $-$ B3 (F4)}\label{tab:t3}\footnotesize
+\begin{tabular}{llllllll}\toprule
+Family & Hold (ms) & Contrast & Outcome & $\Delta$ [95 \% CI] & Clusters & Category & $\delta$* \\\midrule
+F3 & 250.131 & B4-TS $-$ B3h & G & +0.0001 [+0.0000, +0.0002] & 13/141/2 & equivalent & 0.0002 \\
+F3 & 250.131 & B4-TS $-$ B3h & V & -0.0003 [-0.0006, -0.0002] & 14/142/0 & equivalent & 0.0005 \\
+F3 & 250.131 & B4-TPC $-$ B3h & G & -0.0002 [-0.0007, +0.0018] & 1/141/14 & equivalent & 0.0011 \\
+F3 & 250.131 & B4-TPC $-$ B3h & V & +0.0002 [+0.0001, +0.0007] & 2/143/11 & equivalent & 0.0005 \\
+F3 & 250.131 & B5 $-$ B3h & G & -0.0007 [-0.0008, -0.0007] & 1/141/14 & equivalent & 0.0008 \\
+F3 & 250.131 & B5 $-$ B3h & V & -0.0002 [-0.0003, +0.0003] & 13/142/1 & equivalent & 0.0004 \\
+F3 & 250.131 & B4sa-TS $-$ B3h & G & +0.0001 [+0.0001, +0.0002] & 17/137/2 & equivalent & 0.0002 \\
+F3 & 250.131 & B4sa-TS $-$ B3h & V & -0.0003 [-0.0006, -0.0002] & 14/142/0 & equivalent & 0.0005 \\
+F3 & 250.131 & B4sa-TPC $-$ B3h & G & -0.0001 [-0.0011, +0.0018] & 3/139/14 & equivalent & 0.0014 \\
+F3 & 250.131 & B4sa-TPC $-$ B3h & V & +0.0007 [-0.0006, +0.0052] & 13/142/1 & equivalent & 0.0028 \\
+F3 & 250.131 & B5sa $-$ B3h & G & -0.0001 [-0.0006, +0.0019] & 7/135/14 & equivalent & 0.0010 \\
+F3 & 250.131 & B5sa $-$ B3h & V & -0.0003 [-0.0009, -0.0000] & 14/141/1 & equivalent & 0.0007 \\
+F4 & 0.131 & B3h $-$ B3@D1 & G & +0.0000 [+0.0000, +0.0000] & 1/155/0 & equivalent & 0.0000 \\
+F4 & 0.131 & B3h $-$ B3@D1 & V & +0.0000 [+0.0000, +0.0000] & 0/156/0 & equivalent & 0.0000 \\
+F4 & 50.131 & B3h $-$ B3@D1 & G & +0.0009 [+0.0003, +0.0016] & 38/60/58 & equivalent & 0.0016 \\
+F4 & 50.131 & B3h $-$ B3@D1 & V & +0.0043 [+0.0021, +0.0067] & 6/127/23 & equivalent & 0.0064 \\
+F4 & 125.131 & B3h $-$ B3@D1 & G & +0.0015 [+0.0006, +0.0020] & 45/44/67 & equivalent & 0.0021 \\
+F4 & 125.131 & B3h $-$ B3@D1 & V & +0.0067 [+0.0046, +0.0083] & 4/118/34 & equivalent & 0.0085 \\
+F4 & 250.131 & B3h $-$ B3@D1 & G & +0.0011 [+0.0003, +0.0017] & 38/40/78 & equivalent & 0.0017 \\
+F4 & 250.131 & B3h $-$ B3@D1 & V & +0.0070 [+0.0045, +0.0091] & 6/102/48 & equivalent & 0.0092 \\
+\bottomrule\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize Hold in ms. F4 at holds $\ge$ 50 ms: CIs exclude 0 (detectable QoS cost) but lie inside $\pm$$\delta$; $\delta$* shows how close to the margin. F3 at holds ≤ 125 ms reproduces F1 (see csv).}\end{table}
+
+% T4
+\begin{table}[t]\centering\caption{S8-E1 conditional effect among reference-flagged events: arm $-$ B3 at D1 (confirmatory)}\label{tab:t4}\footnotesize
+\begin{tabular}{lllllll}\toprule
+Arm & Outcome & $\theta$̂ [95 \% t CI] & $\theta$̂ [95 \% BCa] & Events & Holm p & Category \\\midrule
+B4sa-TS & G & +0.0011 [+0.0003, +0.0019] & +0.0011 [-0.0002, +0.0016] & 102/49/4 & 7e-46 & equivalent \\
+B4sa-TS & V & +0.0016 [-0.0011, +0.0043] & +0.0016 [-0.0003, +0.0062] & 4/149/2 & 5.3e-08 & equivalent \\
+B4sa-TPC & G & +0.0210 [+0.0154, +0.0265] & +0.0210 [+0.0158, +0.0269] & 70/72/13 & 0.00064 & helps \\
+B4sa-TPC & V & +0.0104 [+0.0038, +0.0169] & +0.0104 [+0.0047, +0.0177] & 24/110/21 & 0.91 & inconclusive \\
+B5sa & G & +0.0188 [+0.0139, +0.0237] & +0.0188 [+0.0143, +0.0239] & 143/0/12 & 0.0017 & helps \\
+B5sa & V & +0.0071 [+0.0017, +0.0125] & +0.0071 [+0.0025, +0.0134] & 26/110/19 & 0.59 & inconclusive \\
+\bottomrule\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize 155 events in 132 seeds (x45 1.23/0.29: 112; x55 0.92/0.29: 43). Seed-cluster-robust t (df 131); BCa = seed-block bootstrap sensitivity. Events = benefit/zero/harm. Conditions selected from S7 activity evidence (disclosed); not generalisable beyond them.}\end{table}
+
+% T5
+\begin{table}[t]\centering\caption{S8-E1 secondary outcomes among events (descriptive): arm $-$ B3}\label{tab:t5}\footnotesize
+\begin{tabular}{llll}\toprule
+Arm & Outcome & $\Delta$ [95 \% CI] & Events (benefit/zero/harm) \\\midrule
+B4sa-TS & min-user & -0.0072 [-0.0099, -0.0045] & 2/49/104 \\
+B4sa-TS & edge V & +0.0049 [-0.0032, +0.0130] & 4/149/2 \\
+B4sa-TS & E\_tx (W$\cdot$s) & +0.4312 [+0.2746, +0.5878] & 1/52/102 \\
+B4sa-TPC & min-user & +0.0660 [+0.0474, +0.0845] & 69/72/14 \\
+B4sa-TPC & edge V & +0.0310 [+0.0115, +0.0506] & 24/110/21 \\
+B4sa-TPC & E\_tx (W$\cdot$s) & -5.2682 [-6.2477, -4.2887] & 82/73/0 \\
+B5sa & min-user & +0.0522 [+0.0354, +0.0689] & 69/0/86 \\
+B5sa & edge V & +0.0213 [+0.0050, +0.0375] & 26/110/19 \\
+B5sa & E\_tx (W$\cdot$s) & -3.8199 [-4.7104, -2.9294] & 70/3/82 \\
+\bottomrule\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize Min-user = weakest-user goodput fraction (higher is better); edge V = violation fraction of the three edge UEs; E\_tx = RF transmit-energy proxy (W$\cdot$s; lower = less energy). Not a measured base-station energy.}\end{table}
+
+% T6
+\begin{table}[t]\centering\caption{S8-E1 what coordination actually did in each event, and its consequence (descriptive)}\label{tab:t6}\footnotesize
+\begin{tabular}{llllllll}\toprule
+Arm & Decision & Events & $\Delta$G & $\Delta$V & $\Delta$min-user & Handovers & TPC reductions \\\midrule
+B4sa-TS & TPC suppressed & 105 & +0.0016 & +0.0024 & -0.0106 & 1.08 / 1.11 & 1.04 / 1.06 \\
+B4sa-TS & no intervention & 50 & -0.0000 & +0.0000 & -0.0000 & 2.40 / 2.40 & 2.38 / 2.38 \\
+B4sa-TPC & TS suppressed & 83 & +0.0391 & +0.0193 & +0.1232 & 0.04 / 1.99 & 1.96 / 1.90 \\
+B4sa-TPC & no intervention & 72 & +0.0000 & +0.0000 & +0.0000 & 1.00 / 1.00 & 1.00 / 1.00 \\
+B5sa & TPC suppressed & 75 & +0.0025 & -0.0005 & -0.0078 & 1.08 / 1.08 & 1.04 / 1.04 \\
+B5sa & TS suppressed & 50 & +0.0239 & +0.0231 & +0.0746 & 0.00 / 2.40 & 2.00 / 2.38 \\
+B5sa & both suppressed & 30 & +0.0508 & -0.0005 & +0.1647 & 0.47 / 1.20 & 2.57 / 1.10 \\
+\bottomrule\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize Decision read from coordinator rejection/choice logs. Mean $\Delta$ vs B3 per event type; handovers and TPC reductions are per run (arm / B3).}\end{table}
+
+% T7
+\begin{table}[t]\centering\caption{Interaction-event frequency: S8-E1 (fresh seeds) vs S7}\label{tab:t7}\footnotesize
+\begin{tabular}{llll}\toprule
+Condition & E1 events & Rate [95 \% CI] & S7 \\\midrule
+x45 1.23/0.29 & 112/220 & 0.509 [0.441, 0.577] & 6/13 \\
+x55 0.92/0.29 & 43/220 & 0.195 [0.145, 0.254] & 0/13 \\
+\bottomrule\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize Event = uncoordinated B3@D1 run flagged by the state-aware (combined) detector. Clopper–Pearson 95 \% CI.}\end{table}
+
+% T8
+\begin{table}[t]\centering\caption{S8-E2 TPC sensitivity, frequency (E2-A): flagged clusters vs reference 24 dBm / 3 dB}\label{tab:t8}\footnotesize
+\begin{tabular}{lllll}\toprule
+Variant & Flagged (ref → variant) & Discordant (ref only / variant only) & p & Holm p \\\midrule
+27 dBm floor & 17 → 14 & 3 / 0 & 0.25 & 0.50 \\
+6 dB step & 17 → 17 & 0 / 0 & 1.00 & 1.00 \\
+\bottomrule\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize 156 paired clusters per variant (6 conditions × 26 seeds). Exact McNemar test, Holm over 2.}\end{table}
+
+% T9
+\begin{table}[t]\centering\caption{S8-E2 robustness of coordination effects (E2-B): interaction contrast [arm $-$ B3h](variant) $-$ [arm $-$ B3h](reference)}\label{tab:t9}\footnotesize
+\begin{tabular}{llllll}\toprule
+Variant & Arm & Outcome & I [95 \% CI] & Non-zero clusters & Category \\\midrule
+27 dBm floor & B4sa-TS & G & — & 0 & no difference (≤ 0.019 share) \\
+27 dBm floor & B4sa-TS & V & — & 0 & no difference (≤ 0.019 share) \\
+27 dBm floor & B4sa-TPC & G & +0.0004 [-0.0000, +0.0009] & 9 & equivalent \\
+27 dBm floor & B4sa-TPC & V & +0.0002 [-0.0001, +0.0004] & 3 & equivalent \\
+27 dBm floor & B5sa & G & +0.0003 [-0.0001, +0.0007] & 8 & equivalent \\
+27 dBm floor & B5sa & V & +0.0002 [-0.0001, +0.0004] & 3 & equivalent \\
+6 dB step & B4sa-TS & G & -0.0002 [-0.0002, -0.0001] & 13 & equivalent \\
+6 dB step & B4sa-TS & V & +0.0001 [-0.0000, +0.0003] & 3 & equivalent \\
+6 dB step & B4sa-TPC & G & -0.0002 [-0.0003, -0.0000] & 9 & equivalent \\
+6 dB step & B4sa-TPC & V & +0.0001 [-0.0001, +0.0004] & 5 & equivalent \\
+6 dB step & B5sa & G & -0.0003 [-0.0004, -0.0001] & 17 & equivalent \\
+6 dB step & B5sa & V & +0.0002 [-0.0000, +0.0005] & 6 & equivalent \\
+\bottomrule\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize Seed-level t (df 25), $\delta$ = 0.01, Holm over the non-degenerate hypotheses. 'No difference' = all 156 cluster values exactly 0.}\end{table}

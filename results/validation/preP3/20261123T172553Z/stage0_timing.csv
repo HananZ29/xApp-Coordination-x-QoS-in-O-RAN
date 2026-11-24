@@ -1,0 +1,6 @@
+level,report_age_ms_min_load_service,ts_input_age_s,b5sa_input_age_s,cmm_hold_ms
+D0,0.0,0.5,0.5,0.0
+PH1,0.0,0.001,0.001,0.0
+E7,21.0,0.5,0.5,0.0
+K100,0.0,0.5,0.0012,13.1
+DL250,0.0,0.5,0.5,250.0

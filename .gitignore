@@ -1,0 +1,16 @@
+/data/
+/reproduced/
+/build/
+/.venv/
+__pycache__/
+*.py[cod]
+*.tmp
+*.log
+!/results/s7/s7_run.log
+!/results/s8/e1/run.log
+!/results/s8/e2/run.log
+.claude/
+CLAUDE.md
+.codex/
+.env
+.env.*

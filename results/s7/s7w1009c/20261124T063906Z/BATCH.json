@@ -1,0 +1,15 @@
+{
+  "batch": "s7w1009c",
+  "stamp": "20261124T063906Z",
+  "external_data": "data/s7/s7w1009c-20261124T063906Z",
+  "code": {
+    "commit": "18e8985075f6acb7a4ca59d6114d4f9ef95ce250",
+    "branch": "feat/restore-phase1-2",
+    "dirty": false
+  },
+  "runs": 11,
+  "status_counts": {
+    "completed": 11
+  },
+  "wall_clock_s": 84.7
+}

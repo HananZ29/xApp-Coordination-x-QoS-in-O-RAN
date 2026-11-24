@@ -1,0 +1,16 @@
+{
+ "rules": {
+  "D0:same_cycle": "LZ",
+  "D0:combined": "LZ",
+  "D1:same_cycle": "LZ",
+  "D1:combined": "LZ",
+  "D1d1:same_cycle": "LZ",
+  "D1d1:combined": "LZ",
+  "D1d2:same_cycle": "LZ",
+  "D1d2:combined": "LZ",
+  "D1d3:same_cycle": "LZ",
+  "D1d3:combined": "LZ",
+  "C3:combined": "LZ"
+ },
+ "ub0": true
+}

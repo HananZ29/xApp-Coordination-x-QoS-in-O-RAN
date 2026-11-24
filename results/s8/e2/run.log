@@ -1,0 +1,21 @@
+16:53:56 wave s8e2chk: 3 runs, 0 failed, 0.6 min
+16:53:56 E2 engineering check: V0: min 24.0 dBm, steps [3.0] -> OK; V1: min 27.0 dBm, steps [3.0] -> OK; V2: min 24.0 dBm, steps [6.0] -> OK
+17:29:31 wave s8e2g01: 288 runs, 0 failed, 35.6 min
+17:29:31 group 1 (seeds 3001-3004): 54 arm runs queued
+18:06:12 wave s8e2g02: 342 runs, 0 failed, 36.7 min
+18:06:12 verification V0: LZh 15/15 identical -> derive unflagged arms
+18:06:13 verification V1: LZh 15/15 identical -> derive unflagged arms
+18:06:13 verification V2: LZh 15/15 identical -> derive unflagged arms
+18:06:13 group 2 (seeds 3005-3008): 9 arm runs queued
+18:42:08 wave s8e2g03: 297 runs, 0 failed, 35.9 min
+18:42:09 group 3 (seeds 3009-3012): 18 arm runs queued
+19:16:06 wave s8e2g04: 306 runs, 0 failed, 33.9 min
+19:16:06 group 4 (seeds 3013-3016): 27 arm runs queued
+19:51:21 wave s8e2g05: 315 runs, 0 failed, 35.3 min
+19:51:21 group 5 (seeds 3017-3020): 27 arm runs queued
+20:28:39 wave s8e2g06: 315 runs, 0 failed, 37.3 min
+20:28:39 group 6 (seeds 3021-3024): 36 arm runs queued
+20:50:17 wave s8e2g07: 180 runs, 0 failed, 21.6 min
+20:50:17 group 7 (seeds 3025-3026): 18 arm runs queued
+20:52:39 wave s8e2final: 18 runs, 0 failed, 2.4 min
+20:52:39 E2 DONE

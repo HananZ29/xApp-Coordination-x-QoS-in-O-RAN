@@ -1,0 +1,25 @@
+13:43:45 wave s8e1b01: 80 runs, 0 failed, 11.1 min
+13:43:45 block 1 (seeds 2001-2020): 12 events; total 12; 120 arm runs queued
+14:13:39 wave s8e1b02: 200 runs, 0 failed, 29.9 min
+14:13:39 verification D1: LZh 84/84 identical -> derive unflagged arms
+14:13:40 block 2 (seeds 2021-2040): 13 events; total 25; 39 arm runs queued
+14:33:21 wave s8e1b03: 119 runs, 0 failed, 19.7 min
+14:33:22 block 3 (seeds 2041-2060): 11 events; total 36; 33 arm runs queued
+14:52:46 wave s8e1b04: 113 runs, 0 failed, 19.4 min
+14:52:47 block 4 (seeds 2061-2080): 17 events; total 53; 51 arm runs queued
+15:13:12 wave s8e1b05: 131 runs, 0 failed, 20.4 min
+15:13:12 block 5 (seeds 2081-2100): 16 events; total 69; 48 arm runs queued
+15:34:59 wave s8e1b06: 128 runs, 0 failed, 21.8 min
+15:34:59 block 6 (seeds 2101-2120): 11 events; total 80; 33 arm runs queued
+15:49:19 wave s8e1b07: 113 runs, 0 failed, 14.3 min
+15:49:19 block 7 (seeds 2121-2140): 14 events; total 94; 42 arm runs queued
+16:03:22 wave s8e1b08: 122 runs, 0 failed, 14.0 min
+16:03:22 block 8 (seeds 2141-2160): 16 events; total 110; 48 arm runs queued
+16:18:08 wave s8e1b09: 128 runs, 0 failed, 14.8 min
+16:18:08 block 9 (seeds 2161-2180): 15 events; total 125; 45 arm runs queued
+16:32:27 wave s8e1b10: 125 runs, 0 failed, 14.3 min
+16:32:27 block 10 (seeds 2181-2200): 16 events; total 141; 48 arm runs queued
+16:47:52 wave s8e1b11: 128 runs, 0 failed, 15.4 min
+16:47:52 block 11 (seeds 2201-2220): 14 events; total 155; 42 arm runs queued
+16:53:07 wave s8e1final: 42 runs, 0 failed, 5.3 min
+16:53:07 E1 DONE: events 155 (target 150); seeds used 220; TARGET MET

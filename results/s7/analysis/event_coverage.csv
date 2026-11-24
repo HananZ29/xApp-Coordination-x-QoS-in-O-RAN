@@ -1,0 +1,7 @@
+cfg,reference,clusters,flagged_combined,under_covered
+D0,B3,156,7,True
+D1,B3h,156,6,True
+D1d1,B3h,156,6,True
+D1d2,B3h,156,7,True
+D1d3,B3h,156,21,False
+C3,B3h,52,13,False

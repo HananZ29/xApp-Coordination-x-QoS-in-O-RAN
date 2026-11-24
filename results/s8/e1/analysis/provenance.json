@@ -1,0 +1,13 @@
+{
+ "label": "FINAL",
+ "events": 155,
+ "sampled_clusters": 440,
+ "failed_reference_clusters": 0,
+ "seeds": 220,
+ "runs": 2200,
+ "derived": 771,
+ "script_sha256": "eb1f4f284f7b52ea1b859cf9e1a0440be252c3d2cf3eba284778d3b70b7caf50",
+ "delta": 0.01,
+ "alpha": 0.05,
+ "bootstrap_B": 10000
+}

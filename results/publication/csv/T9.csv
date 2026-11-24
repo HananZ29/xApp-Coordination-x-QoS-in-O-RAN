@@ -1,0 +1,13 @@
+Variant,Arm,Outcome,I [95 % CI],Non-zero clusters,Category
+27 dBm floor,B4sa-TS,G,—,0,no difference (≤ 0.019 share)
+27 dBm floor,B4sa-TS,V,—,0,no difference (≤ 0.019 share)
+27 dBm floor,B4sa-TPC,G,"+0.0004 [-0.0000, +0.0009]",9,equivalent
+27 dBm floor,B4sa-TPC,V,"+0.0002 [-0.0001, +0.0004]",3,equivalent
+27 dBm floor,B5sa,G,"+0.0003 [-0.0001, +0.0007]",8,equivalent
+27 dBm floor,B5sa,V,"+0.0002 [-0.0001, +0.0004]",3,equivalent
+6 dB step,B4sa-TS,G,"-0.0002 [-0.0002, -0.0001]",13,equivalent
+6 dB step,B4sa-TS,V,"+0.0001 [-0.0000, +0.0003]",3,equivalent
+6 dB step,B4sa-TPC,G,"-0.0002 [-0.0003, -0.0000]",9,equivalent
+6 dB step,B4sa-TPC,V,"+0.0001 [-0.0001, +0.0004]",5,equivalent
+6 dB step,B5sa,G,"-0.0003 [-0.0004, -0.0001]",17,equivalent
+6 dB step,B5sa,V,"+0.0002 [-0.0000, +0.0005]",6,equivalent

@@ -1,0 +1,22 @@
+{
+ "outcome_agreement": {
+  "runs": 6968,
+  "max_abs_dG": 3.3306690738754696e-16,
+  "max_abs_dV": 9.8879238130678e-17,
+  "runs_V_differs": 0,
+  "nwin": [
+   49
+  ],
+  "n_ue": [
+   9
+  ]
+ },
+ "n_hypotheses": 80,
+ "equiv_boot": 80,
+ "equiv_t": 80,
+ "degenerate_all_seed_means_equal": 27,
+ "all_zero": 27,
+ "registered_equivalent": 80,
+ "max_abs_mean_diff_vs_registered": 9.215718466126788e-17,
+ "max_ci_bound_diff_note": "registered BCa vs audit t90 not comparable"
+}
