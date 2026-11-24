@@ -1,0 +1,17 @@
+scenario,arm,suppressed,consequence,runs
+S092,B4sa-TPC,,no suppression,26
+S092,B4sa-TS,,no suppression,26
+S092,B5sa,,no suppression,26
+S123,B4sa-TPC,,no suppression,26
+S123,B4sa-TS,,no suppression,26
+S123,B5sa,,no suppression,26
+T092,B4sa-TPC,,no suppression,23
+T092,B4sa-TPC,TS,prevented harm,2
+T092,B4sa-TPC,TS,suppressed benefit,1
+T092,B4sa-TS,,no suppression,26
+T092,B5sa,,no suppression,23
+T092,B5sa,TS,prevented harm,2
+T092,B5sa,TS,suppressed benefit,1
+T123,B4sa-TPC,TS,suppressed benefit,26
+T123,B4sa-TS,,no suppression,26
+T123,B5sa,TS,suppressed benefit,26
