@@ -34,6 +34,5 @@ replace local path strings in JSON and JSONL metadata. The recorded
 configuration, binary and output hashes identify the original run evidence.
 Derived records identify the simulated source run and its hashes.
 
-Research by Hanan Zoueihed. Claude Code assisted with implementation and
-analysis tooling under the researcher's direction. The simulation uses
+Research by Hanan Zoueihed and Nour Sakr. The simulation uses
 ns-3 and the NIST ns3-oran module, credited here as upstream dependencies.
